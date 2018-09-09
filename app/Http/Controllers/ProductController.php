@@ -10,6 +10,7 @@ use App\Http\Requests\ProductRequest;
 use Input;
 use App\Productimage;
 use Illuminate\Http\UploadedFile;
+use File;
 
 class ProductController extends Controller
 {
@@ -92,6 +93,21 @@ class ProductController extends Controller
                 'name.required' =>' Bạn Chưa Nhập Tên'
             ]);
 
+        $img_curr='upload/images/product/'.$request->input('img_curr');
+        if (!empty($request->file('image')))
+        {
+            $file_name = $request->file('image')->getClientOriginalName();
+            // $product->image=$file_name;
+            $request->file('image')->move('upload/images/product/',$file_name);
+            if (File::exists($img_curr)) {
+                File::delete($img_curr);
+            }
+        }
+        else
+        {
+            $file_name = $request->input('img_curr');
+        }
+
         $product = Product::find($id);
         $product->name = $request->name;
         $product->cat_id = $request->category;
@@ -101,9 +117,11 @@ class ProductController extends Controller
         $product->quanlity = $request->qty;
         $product->status = $request->status;
         $product->stock = $request->stock;
-        $product->image =  '7559.jfif' ;
+        $product->image =  $file_name ;
         $product->content = $request->content;
         $product->save();
+
+        
         return redirect('product/list')->with('success','Bạn đã Sửa thành công');
     }
     public function destroy($id)

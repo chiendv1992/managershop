@@ -61,6 +61,9 @@ class BannerController extends Controller
                 File::delete($img_curr);
             }
         }
+        else {
+            $file_name = $request->input('img_curr');
+        }
         $banner->status = $request->status;
         $banner->save();
         return redirect('/banner/list')->with('success','Bạn Cập Nhật Thành công !!');

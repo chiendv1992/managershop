@@ -41,8 +41,8 @@
 										<th>Mô Tả</th>
 										<th>Giá</th>
 										<th>Sale</th>
-										<th>Sale Từ ngày</th>
-										<th>Sale đến ngày</th>
+										<!-- <th>Sale Từ ngày</th>
+										<th>Sale đến ngày</th> -->
 										<th>Số lượng</th>											
 										<th>Trạng thái</th>
 										<th>Stock</th>
@@ -63,8 +63,8 @@
 											<td>{!!$pro->description!!}</td>
 											<td>{{Number_format($pro->price)}}</td>
 											<td>{{$pro->sale}}</td>
-											<td>{{$pro->salefrom}}</td>
-											<td>{{$pro->saleto}}</td>
+											<!-- <td>{{$pro->salefrom}}</td>
+											<td>{{$pro->saleto}}</td> -->
 											<td>
 												@if($pro->quanlity>0)
 													{{$pro->quanlity}}

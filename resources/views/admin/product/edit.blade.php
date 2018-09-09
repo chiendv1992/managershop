@@ -52,11 +52,11 @@
 	                            </div>
 	                            <div class="form-group" > 
 					              <label>Hình Ảnh Hiện Tại</label>           
-					              <img width="100%" src="{{url('upload/images/product/')}}/{{$product->image}}" class="image">
+					              <img width="100%" src="{{url('upload/images/product/')}}/{{$product->image}}" class="image">					              
+					              <input type="hidden" name="img_curr" value="{{$product->image}}">
 					          </div>
 	                            <div class="form-group">
 					              <input type="file" name="image">
-					              <input type="hidden" name="img_curr" value="{{$product->image}}">
 					          </div>
 	                            <div class="form-group">
 	                                <label>stock : </label>

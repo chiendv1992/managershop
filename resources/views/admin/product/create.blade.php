@@ -34,7 +34,7 @@
 		                                <input class="form-control" name="sale"  value="" />
 		                                <p style="color: red">{{ $errors->first('sale') }}</p>
 		                            </div>
-		                            <div class="form-group">
+		                            <!-- <div class="form-group">
 	                                	<div class=" col-md-6">
 		                                	<label>KM từ ngày :</label>
 		                                	<input type="date" class="form-control" name="saleto">
@@ -44,7 +44,7 @@
 		                                	<input type="date" class="form-control" name="salefrom">
 		                                </div>	
 		                                	                                
-		                            </div>
+		                            </div> -->
 		                            <div class="form-group">
 		                                <label>Số Lượng : </label>
 		                                <input class="form-control" name="qty"  value="" />
