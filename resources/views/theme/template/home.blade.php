@@ -1,6 +1,6 @@
 @extends('theme.master')
 @section('title')
-        Home
+        Trang chủ
 @endsection
 @section('content')
     <div class="container">
@@ -88,7 +88,7 @@
                             </span>
                             @endif
                     </div>
-                    <a class="now-get get-cart" href="#">ADD TO CART</a>
+                    <a class="now-get get-cart" href="{{asset('purchase/')}}/{{$value->id}}/{{$value->name}}">ADD TO CART</a>
                     <div class="clearfix"> </div>
                 </div>
             </div>

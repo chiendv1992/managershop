@@ -110,6 +110,14 @@
 
             Route::get('/category/{id}/{name}', ['as'=>'category','uses'=>'IndexController@category']);
 
+
+            Route::get('purchase/{id}/{name}',['as'=>'purchase','uses'=>'IndexController@purchase']);
+
+			Route::get('card',['as'=>'card','uses'=>'IndexController@card']);
+
+			Route::post('card',['as'=>'card','uses'=>'IndexController@postcard']);
+
+			Route::get('delete-card/{id}',['as'=>'deletecard','uses'=>'IndexController@deletecard']);
 			
 
 

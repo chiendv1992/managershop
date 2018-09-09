@@ -28,9 +28,7 @@
 										<th>Email</th>
 										<th>Tên Sản Phẩm</th>
 										<th>Ngày Lập</th>	
-										<th>Ngày Giao Hàng</th>	
 										<th>Tình trạng</th>	
-										<th>số lượng</th>
 										<th>Tổng tiền</th>
 										<th>Xóa</th>
 									</tr>
@@ -45,8 +43,7 @@
 											<td>{{$or->order->customer->phone}}</td>
 											<td>{{$or->order->customer->email}}</td>
 											<td>{{$or->product->name}}</td>												
-											<td>{{$or->order->orderdate}}</td>
-											<td>{{$or->order->shippeddate}}</td>	
+											<td>{{$or->order->orderdate}}</td>	
 											<td>
 												@if($or->status==0)
 													{{ 'Chưa Thanh Toán '}}
@@ -54,8 +51,7 @@
 													{{' Đã Thanh Toán '}}
 												@endif
 											</td>
-											<td>{{$or->order->total}}</td>
-											<td>{{number_format(($or->order->total)*($or->product->price))}}</td>											
+											<td></td>											
 											
 											<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="delete/{{$or->id}}" onclick="xacnhanxoa()"> Delete</a></td>
                             				
