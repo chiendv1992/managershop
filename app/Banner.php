@@ -9,5 +9,5 @@ class Banner extends Model
     protected $table='banner';
 	protected $primaryKey = 'id';
     public $timestamps = false;
-    protected $fillable=['image','status',];
+    protected $fillable=['id','image','status',];
 }
